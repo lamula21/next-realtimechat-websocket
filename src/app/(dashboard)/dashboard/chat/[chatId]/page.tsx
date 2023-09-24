@@ -59,7 +59,7 @@ export default async function ChatPage({ params }: PageProps) {
 	const initialMessages = await getChatMessages(chatId)
 
 	return (
-		<main className="flex flex-col flex-1 justify-between">
+		<main className="flex flex-col flex-1 justify-between h-full">
 			<div className="px-5 flex sm:items-center justify-between py-3 border-b-2 border-gray-200 ">
 				<div className="relative flex items-center space-x-4">
 					<div className="relative">

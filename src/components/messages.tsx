@@ -49,7 +49,7 @@ export default function Messages({
 	return (
 		<div
 			id="messages"
-			className="flex h-full flex-1 flex-col-reverse gap-4 p-3 overflow-y-auto scroll-thumb-blue scrollbar-thumb-rounded scroll-track-blue-lighter scrollbar-w-2 scrolling-touch "
+			className="flex flex-1 flex-col-reverse gap-4 p-3 max-h-[calc(100vh-13.5rem)] overflow-y-auto scroll-thumb-blue scrollbar-thumb-rounded scroll-track-blue-lighter scrollbar-w-2 scrolling-touch "
 		>
 			{/* // automatically scroll down to new message */}
 			<div ref={scrollDownRef} />
