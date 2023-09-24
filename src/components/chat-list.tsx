@@ -90,11 +90,11 @@ export default function ChatList({ friends, sessionId }: ChatListProps) {
 								sessionId,
 								friend.id
 							)}`}
-							className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex items-center gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+							className="text-gray-700 hover:text-red-600 hover:bg-gray-50 group flex items-center gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
 						>
 							{friend.name}
 							{unseenMessagesCount > 0 ? (
-								<div className="bg-indigo-600 font-medium text-xs text-white w-4 h-4 rounded-full flex justify-center items-center">
+								<div className="bg-red-600 font-medium text-xs text-white w-4 h-4 rounded-full flex justify-center items-center">
 									{unseenMessagesCount}
 								</div>
 							) : null}
