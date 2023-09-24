@@ -1,14 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-
-import { Button } from '@/components/ui/button'
-import { GoogleIcon } from '@/components/icons/icons'
-import { cn } from '@/lib/utils'
 import { toast } from 'sonner'
 import { signIn } from 'next-auth/react'
 
-export default function page() {
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
+import { GoogleIcon } from '@/components/icons/icons'
+
+export default function Page() {
 	const [loading, setLoading] = useState(false)
 
 	async function loginWithGoogle() {

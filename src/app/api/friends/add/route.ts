@@ -7,7 +7,7 @@ import { addFriendSchema } from '@/lib/validations/add-friend'
 import { getServerSession } from 'next-auth'
 import { ZodError } from 'zod'
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<Response> {
 	try {
 		const body = await req.json() // <=> req.body
 
@@ -72,12 +72,10 @@ export async function POST(req: Request) {
 
 		return new Response('Friend request sent', { status: 200 })
 	} catch (error) {
-		if (error) {
-			if (error instanceof ZodError) {
-				return new Response('Invalid request payload', { status: 422 })
-			}
-
-			return new Response('Internal server error', { status: 500 })
+		if (error instanceof ZodError) {
+			return new Response('Invalid request payload', { status: 422 })
 		}
+
+		return new Response('Internal server error', { status: 500 })
 	}
 }

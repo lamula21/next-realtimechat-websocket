@@ -27,9 +27,8 @@ export default function ChatList({ friends, sessionId }: ChatListProps) {
 		pusherClient.subscribe(toPusherKey(`user:${sessionId}:chats`))
 		pusherClient.subscribe(toPusherKey(`user:${sessionId}:friends`))
 
-		// refreshes the page
+		// refreshes the page when friend accepts request
 		const newFriendHandler = (newFriend: User) => {
-			console.log('received new user', newFriend)
 			setActiveChats((prev) => [...prev, newFriend])
 		}
 
