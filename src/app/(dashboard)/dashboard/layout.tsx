@@ -45,7 +45,7 @@ export default async function DashBoardLayout({ children }: Props) {
 	return (
 		<main className="flex w-full">
 			<nav className="flex h-screen">
-				<div className="flex flex-col h-full max-w-xs grow gap-y-7 overflow-y-auto border-r border-gray-200 bg-white px-6">
+				<div className="flex flex-col max-w-xs grow gap-y-7 overflow-y-auto border-r border-gray-200 bg-white px-6">
 					<div className="flex flex-col flex-1 gap-y-7">
 						<Link
 							href="/dashboard"
