@@ -24,6 +24,9 @@ export default async function DashBoardPage() {
 				-1
 			)) as string[]
 
+			if (!lastMessageRaw) return { ...friend, lastMessage: '' }
+
+			// Parse UTF-8 string to JSON
 			const lastMessage = JSON.parse(lastMessageRaw) as Message
 
 			return {
