@@ -24,12 +24,8 @@ export default async function DashBoardPage() {
 				-1
 			)) as string[]
 
-			console.log(lastMessageRaw)
-
 			// Parse UTF-8 string to JSON
 			const lastMessage = JSON.parse(lastMessageRaw) as Message
-
-			console.log(lastMessage)
 
 			return {
 				...friend,
